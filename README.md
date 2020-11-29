@@ -1,4 +1,4 @@
-# Keep The Gain
+# Keep The Rain!
 
 A simple server side mod that prevents rain timer from resetting after sleep and gives a chance for rain to continue after players woke up.
 

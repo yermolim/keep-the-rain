@@ -1,10 +1,7 @@
 {
-  "homepage": "<homepage/download page for your mod>",
-  "<mcversion>": {
-    "<modversion>": "<changelog for this version>" 
-  },
+  "homepage": "https://github.com/yermolim/keep-the-rain/releases",
   "promos": {
-    "<mcversion>-latest": "<modversion>",
-    "<mcversion>-recommended": "<modversion>"
+    "1.16.3-latest": "0.1.2",
+    "1.16.3-recommended": "0.1.2"
   }
 }
