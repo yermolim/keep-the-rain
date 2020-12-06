@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 import xyz.yermolim.keeptherain.KeepTheRain;
-import xyz.yermolim.keeptherain.config.CommonConfig;
+import xyz.yermolim.keeptherain.config.ConfigManager;
 
 @EventBusSubscriber(modid = KeepTheRain.MOD_ID, bus = EventBusSubscriber.Bus.FORGE)
 public class SleepEventHandler {
@@ -31,7 +31,7 @@ public class SleepEventHandler {
           @Override
           public void run() {
               if (untilRain == 0) {   
-                    double rainContinuationChance = CommonConfig.rainContinuationChance;   
+                    double rainContinuationChance = ConfigManager.rainContinuationChance;   
                     double roll = Math.random();
                     KeepTheRain.LOGGER.info(String.format("Rain continuation dice rolled: %s/%s.", roll, rainContinuationChance));
                     if (roll < rainContinuationChance) {
@@ -41,7 +41,7 @@ public class SleepEventHandler {
                         serverWorldInfo.setRaining(false);
                         KeepTheRain.LOGGER.info("Rain continuation not passed.");
                     }
-              } else if (CommonConfig.preserveRainTime) {
+              } else if (ConfigManager.preserveRainTime) {
                   serverWorldInfo.setRainTime(untilRain);
               }
           }

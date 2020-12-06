@@ -16,7 +16,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import xyz.yermolim.keeptherain.config.CommonConfig;
+import xyz.yermolim.keeptherain.config.ConfigManager;
 
 @Mod(KeepTheRain.MOD_ID)
 public class KeepTheRain
@@ -24,6 +24,7 @@ public class KeepTheRain
     public static final String MOD_ID = "keeptherain";
     public static final String MOD_NAME = "Keep the rain!";
     public static final String MOD_VERSION = "%gradle.version%";
+    
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public KeepTheRain() {
@@ -35,7 +36,8 @@ public class KeepTheRain
         // disable checking if mod is loaded on the other side
         ModLoadingContext.get().registerExtensionPoint(ExtensionPoint.DISPLAYTEST, () -> Pair.of(() -> FMLNetworkConstants.IGNORESERVERONLY, (a, b) -> true));
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, CommonConfig.CLIENT_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigManager.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ConfigManager.CLIENT_SPEC);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
