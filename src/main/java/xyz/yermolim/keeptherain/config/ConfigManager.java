@@ -22,10 +22,12 @@ public class ConfigManager {
 
   public static boolean preserveRainTime;     
   public static double rainContinuationChance;     
+  public static double thunderContinuationChance;     
 
   private static void bakeCommonConfig() {
     preserveRainTime = COMMON.preserveRainTime.get();
     rainContinuationChance = COMMON.rainContinuationChance.get();
+    thunderContinuationChance = COMMON.thunderContinuationChance.get();
   }  
   
   private static void bakeClientConfig() {

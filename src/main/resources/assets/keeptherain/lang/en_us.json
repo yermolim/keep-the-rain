@@ -1,5 +1,6 @@
 {
   "config.keeptherain.title": "KTR! Settings",
   "config.keeptherain.preserveRainTime": "Enable preserving the time left to next rain after players woke up",
-  "config.keeptherain.rainContinuationChance": "Change the chance of rain continuation after players woke up from 0(never) to 1(always)"
+  "config.keeptherain.rainContinuationChance": "Change the chance of rain continuation after players woke up from 0(never) to 1(always)",
+  "config.keeptherain.thunderContinuationChance": "Change the chance of thunder continuation after players woke up from 0(never) to 1(always when rain continuation is passed)"
 }
