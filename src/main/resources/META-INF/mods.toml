@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[36,)"
 
 license="MIT"
 issueTrackerURL="https://github.com/yermolim/keep-the-rain/issues"
@@ -20,13 +20,13 @@ issueTrackerURL="https://github.com/yermolim/keep-the-rain/issues"
 [[dependencies.keeptherain]]
     modId="forge"
     mandatory=true
-    versionRange="[34,)"
+    versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.keeptherain]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3,)"
+    versionRange="[1.16.5,)"
     ordering="NONE"
     side="BOTH"

@@ -19,10 +19,11 @@ public class SleepEventHandler {
     @SubscribeEvent
     public static void onWake(SleepFinishedTimeEvent event) {
         IWorld world = event.getWorld();
-        IWorldInfo worldInfo = world.getWorldInfo();
+        IWorldInfo worldInfo = world.getLevelData();
         if (!(worldInfo instanceof ServerWorldInfo)) {
             return;
         }
+
         ServerWorldInfo serverWorldInfo = (ServerWorldInfo)worldInfo;
         int untilRain = !worldInfo.isRaining()
             ? serverWorldInfo.getRainTime()
